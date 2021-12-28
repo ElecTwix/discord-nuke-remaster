@@ -1,19 +1,14 @@
 #include <dpp/dpp.h>
 #include <iostream>
 #include <string>
-#include <cstddef>
-#include <regex>
 #include <sstream>
-#include <chrono>
-#include <thread>
 #include <json/value.h>
 #include <json/json.h>
 #include <json/writer.h>
 
 
 using namespace std;
-using namespace std::this_thread;
-using namespace std::chrono;
+
 
 
 char prefix = { '!' };
@@ -33,9 +28,7 @@ struct versionsct
     int build = 0;
 };
 
-struct versionsct version = { 0,1,01 };
-
-
+struct versionsct version = { 0,2,01 };
 
 
 Json::Value readandfetch()
@@ -82,19 +75,6 @@ Json::Value readandfetch()
 
     return -1;
 
-}
-
-void writeandfetch(Json::Value root)
-{
-    if ((root != -1) || (root != NULL))
-    {
-        jsonglobal = root;
-
-    }
-    currentfile.close();
-    Json::StyledStreamWriter writer;
-    std::ofstream test1("data.json");
-    writer.write(test1, root);
 }
 
 int main()
@@ -145,10 +125,6 @@ int main()
 
                             );
                         }
-
-
-
-
 
                         for (int i = 0; i < 100; i++)
                         {
