@@ -1,0 +1,9 @@
+{
+	"config" : 
+	{
+		"bot-token" : "Bot Token Here",
+		"ignorpostfix" : "true",
+		"nukecommand" : "DEFCON-1",
+		"prefix" : "!"
+	}
+}
