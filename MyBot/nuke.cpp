@@ -37,7 +37,7 @@ struct versionsct
     int build = 0;
 };
 
-struct versionsct version = { 0,4,1 };
+struct versionsct version = { 0,5,0 };
 
 struct SessionDetails SessionDetails;
 
